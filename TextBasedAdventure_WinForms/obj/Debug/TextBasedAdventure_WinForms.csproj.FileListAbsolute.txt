@@ -1,0 +1,9 @@
+C:\Users\Student\Desktop\TechAcademy\C#\PROJECTS\TextBasedAdventure_WinForms\TextBasedAdventure_WinForms\bin\Debug\TextBasedAdventure_WinForms.exe.config
+C:\Users\Student\Desktop\TechAcademy\C#\PROJECTS\TextBasedAdventure_WinForms\TextBasedAdventure_WinForms\bin\Debug\TextBasedAdventure_WinForms.exe
+C:\Users\Student\Desktop\TechAcademy\C#\PROJECTS\TextBasedAdventure_WinForms\TextBasedAdventure_WinForms\bin\Debug\TextBasedAdventure_WinForms.pdb
+C:\Users\Student\Desktop\TechAcademy\C#\PROJECTS\TextBasedAdventure_WinForms\TextBasedAdventure_WinForms\obj\Debug\TextBasedAdventure_WinForms.Form1.resources
+C:\Users\Student\Desktop\TechAcademy\C#\PROJECTS\TextBasedAdventure_WinForms\TextBasedAdventure_WinForms\obj\Debug\TextBasedAdventure_WinForms.Properties.Resources.resources
+C:\Users\Student\Desktop\TechAcademy\C#\PROJECTS\TextBasedAdventure_WinForms\TextBasedAdventure_WinForms\obj\Debug\TextBasedAdventure_WinForms.csproj.GenerateResource.Cache
+C:\Users\Student\Desktop\TechAcademy\C#\PROJECTS\TextBasedAdventure_WinForms\TextBasedAdventure_WinForms\obj\Debug\TextBasedAdventure_WinForms.exe
+C:\Users\Student\Desktop\TechAcademy\C#\PROJECTS\TextBasedAdventure_WinForms\TextBasedAdventure_WinForms\obj\Debug\TextBasedAdventure_WinForms.pdb
+C:\Users\Student\Desktop\TechAcademy\C#\PROJECTS\TextBasedAdventure_WinForms\TextBasedAdventure_WinForms\obj\Debug\TextBasedAdventure_WinForms.csprojResolveAssemblyReference.cache
