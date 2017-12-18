@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.playerGroupBox = new System.Windows.Forms.GroupBox();
+            this.components = new System.ComponentModel.Container();
             this.playerConsole = new System.Windows.Forms.TextBox();
-            this.oldConsole = new System.Windows.Forms.Panel();
-            this.resultLabel = new System.Windows.Forms.Label();
-            this.returnButton = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,72 +38,28 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openReadmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameConsole = new System.Windows.Forms.TextBox();
-            this.playerGroupBox.SuspendLayout();
-            this.oldConsole.SuspendLayout();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.playerCharacterTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // playerGroupBox
-            // 
-            this.playerGroupBox.Controls.Add(this.playerConsole);
-            this.playerGroupBox.Location = new System.Drawing.Point(13, 436);
-            this.playerGroupBox.Name = "playerGroupBox";
-            this.playerGroupBox.Size = new System.Drawing.Size(544, 164);
-            this.playerGroupBox.TabIndex = 0;
-            this.playerGroupBox.TabStop = false;
             // 
             // playerConsole
             // 
-            this.playerConsole.BackColor = System.Drawing.Color.Black;
+            this.playerConsole.BackColor = System.Drawing.Color.Navy;
+            this.playerConsole.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.playerConsole.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.playerConsole.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.playerConsole.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.playerConsole.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playerConsole.ForeColor = System.Drawing.Color.Lime;
-            this.playerConsole.Location = new System.Drawing.Point(6, 19);
-            this.playerConsole.Multiline = true;
+            this.playerConsole.ForeColor = System.Drawing.Color.White;
+            this.playerConsole.Location = new System.Drawing.Point(36, 209);
             this.playerConsole.Name = "playerConsole";
             this.playerConsole.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.playerConsole.Size = new System.Drawing.Size(532, 139);
+            this.playerConsole.Size = new System.Drawing.Size(1011, 23);
             this.playerConsole.TabIndex = 0;
-            this.playerConsole.UseWaitCursor = true;
-            this.playerConsole.TextChanged += new System.EventHandler(this.playerConsole_TextChanged);
-            // 
-            // oldConsole
-            // 
-            this.oldConsole.AutoScroll = true;
-            this.oldConsole.BackColor = System.Drawing.Color.Black;
-            this.oldConsole.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.oldConsole.Controls.Add(this.resultLabel);
-            this.oldConsole.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.oldConsole.ForeColor = System.Drawing.Color.Lime;
-            this.oldConsole.Location = new System.Drawing.Point(19, 402);
-            this.oldConsole.Name = "oldConsole";
-            this.oldConsole.Size = new System.Drawing.Size(1009, 35);
-            this.oldConsole.TabIndex = 1;
-            // 
-            // resultLabel
-            // 
-            this.resultLabel.AutoSize = true;
-            this.resultLabel.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultLabel.ForeColor = System.Drawing.Color.Lime;
-            this.resultLabel.Location = new System.Drawing.Point(3, 1);
-            this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(73, 23);
-            this.resultLabel.TabIndex = 0;
-            this.resultLabel.Text = "output:";
-            // 
-            // returnButton
-            // 
-            this.returnButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.returnButton.Font = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnButton.Location = new System.Drawing.Point(957, 562);
-            this.returnButton.Name = "returnButton";
-            this.returnButton.Size = new System.Drawing.Size(38, 38);
-            this.returnButton.TabIndex = 2;
-            this.returnButton.Text = "Execute";
-            this.returnButton.UseCompatibleTextRendering = true;
-            this.returnButton.UseVisualStyleBackColor = true;
-            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
+            this.playerConsole.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.playerConsole_KeyPress);
             // 
             // menuStrip1
             // 
@@ -115,7 +68,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1049, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(2880, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -133,7 +86,7 @@
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
             this.newGameToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newGameToolStripMenuItem.Text = "New Game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
@@ -141,7 +94,7 @@
             // 
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
             this.restartToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.restartToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.restartToolStripMenuItem.Text = "Restart";
             this.restartToolStripMenuItem.Click += new System.EventHandler(this.restartToolStripMenuItem_Click);
             // 
@@ -149,7 +102,7 @@
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             this.quitToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
@@ -171,54 +124,80 @@
             // 
             // gameConsole
             // 
-            this.gameConsole.BackColor = System.Drawing.Color.Black;
-            this.gameConsole.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.gameConsole.Cursor = System.Windows.Forms.Cursors.No;
+            this.gameConsole.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.gameConsole.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.gameConsole.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gameConsole.CausesValidation = false;
+            this.gameConsole.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gameConsole.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameConsole.ForeColor = System.Drawing.Color.Lime;
-            this.gameConsole.Location = new System.Drawing.Point(19, 28);
+            this.gameConsole.ForeColor = System.Drawing.Color.Black;
+            this.gameConsole.Location = new System.Drawing.Point(0, 28);
             this.gameConsole.Multiline = true;
             this.gameConsole.Name = "gameConsole";
             this.gameConsole.ReadOnly = true;
-            this.gameConsole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.gameConsole.Size = new System.Drawing.Size(1009, 358);
+            this.gameConsole.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.gameConsole.Size = new System.Drawing.Size(2049, 600);
             this.gameConsole.TabIndex = 4;
             this.gameConsole.TextChanged += new System.EventHandler(this.gameConsole_TextChanged);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.playerConsole);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 656);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(2049, 244);
+            this.panel1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 206);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 29);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "> ";
+            // 
+            // playerCharacterTextBox
+            // 
+            this.playerCharacterTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.playerCharacterTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.playerCharacterTextBox.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerCharacterTextBox.Location = new System.Drawing.Point(676, 631);
+            this.playerCharacterTextBox.Name = "playerCharacterTextBox";
+            this.playerCharacterTextBox.Size = new System.Drawing.Size(289, 23);
+            this.playerCharacterTextBox.TabIndex = 6;
+            // 
             // Form1
             // 
-            this.AcceptButton = this.returnButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 612);
+            this.ClientSize = new System.Drawing.Size(2880, 900);
+            this.Controls.Add(this.playerCharacterTextBox);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.gameConsole);
-            this.Controls.Add(this.returnButton);
-            this.Controls.Add(this.oldConsole);
-            this.Controls.Add(this.playerGroupBox);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Text Based Adventurre";
+            this.Text = "Text Based Adventure";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.playerGroupBox.ResumeLayout(false);
-            this.playerGroupBox.PerformLayout();
-            this.oldConsole.ResumeLayout(false);
-            this.oldConsole.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox playerGroupBox;
-        private System.Windows.Forms.Panel oldConsole;
-        public System.Windows.Forms.Button returnButton;
-        public System.Windows.Forms.Label resultLabel;
         public System.Windows.Forms.TextBox playerConsole;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -227,7 +206,11 @@
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openReadmeToolStripMenuItem;
-        private System.Windows.Forms.TextBox gameConsole;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox playerCharacterTextBox;
+        public System.Windows.Forms.TextBox gameConsole;
+        public System.Windows.Forms.Panel panel1;
     }
 }
 
